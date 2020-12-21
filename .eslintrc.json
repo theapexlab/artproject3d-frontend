@@ -27,6 +27,7 @@
     "rules": {
         "@typescript-eslint/no-use-before-define": "warn",
         "no-use-before-define": "off",
+        "css.lint.unknownAtRules": "off",
         // turn on errors for missing imports
         "import/no-unresolved": "error",
         "prettier/prettier": "error",
