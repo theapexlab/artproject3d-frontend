@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import { SamplePlayground } from './views/SamplePlayground'
 
 function App(): JSX.Element {
   return (
@@ -10,6 +11,7 @@ function App(): JSX.Element {
           <p className="text-gray-500">It is workin!</p>
         </div>
       </div>
+      <SamplePlayground />
     </div>
   )
 }
