@@ -4,6 +4,10 @@ import React, {
   useLayoutEffect,
   HTMLAttributes,
 } from 'react'
+import 'babylonjs-loaders'
+import * as BABYLON from '@babylonjs/core'
+
+import '@babylonjs/loaders/OBJ'
 import { Engine, Scene } from 'react-babylonjs'
 import { Vector3 } from '@babylonjs/core'
 
@@ -48,13 +52,35 @@ const SamplePlayground: React.FC<HTMLAttributes<HTMLDivElement>> = ({
               intensity={0.7}
               direction={Vector3.Up()}
             />
-            <sphere
-              name="sphere1"
-              diameter={2}
-              segments={16}
-              position={new Vector3(0, 1, 0)}
+            <ground name="ground1" width={10} height={10} subdivisions={3} />
+            <box
+              name="fal1"
+              width={10}
+              height={5}
+              depth={1}
+              position={new Vector3(0, 2.5, 5)}
             />
-            <ground name="ground1" width={6} height={6} subdivisions={2} />
+            <box
+              name="fal2"
+              width={10}
+              height={5}
+              position={new Vector3(-5, 2.5, 0)}
+              rotation={new Vector3(0, Math.PI / 2)}
+            />
+            <box
+              name="fal3"
+              width={10}
+              height={5}
+              position={new Vector3(5, 2.5, 0)}
+              rotation={new Vector3(0, Math.PI / 2)}
+            />
+            <box
+              name="fal4"
+              width={10}
+              height={5}
+              depth={1}
+              position={new Vector3(0, 2.5, -5)}
+            />
           </Scene>
         </Engine>
       </div>
