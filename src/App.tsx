@@ -4,7 +4,7 @@ import './App.css'
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 10000)
+    setTimeout(() => setIsLoading(false), 15000)
   })
   return (
     <div style={{ display: 'flex', height: '100%' }}>
